@@ -1,0 +1,19 @@
+.green {
+    color: #00eed1;
+    transition: all 0.2s;
+}
+
+.green:hover {
+    color: #04abe9;  
+    transform: perspective(400px) rotateX(45deg);
+}
+
+.blue {
+    transition: all 0.2s;
+	color: #04abe9;
+}
+
+.blue:hover {
+    color: #00eed1;
+    transform: perspective(400px) rotateX(45deg);
+}

@@ -1,0 +1,59 @@
+.wrapper {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    height: 0px;
+    width: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    top: 50%;
+}
+
+.show {
+    animation-name: appear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    background-color: #00eed1;
+    animation-timing-function: cubic-bezier(.93,.1,.42,.91);;
+}
+
+.hide {
+    animation-name: disappear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    background-color: #00eed1;
+    animation-timing-function: cubic-bezier(.93,.1,.42,.91);;
+}
+
+.child-wrapper {
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+}    
+
+@keyframes appear {
+    100% { 
+        height: 70vh;
+        width: 80vw;
+        background-color: #04abe9;
+        border-radius: 10px;
+        top: 50%;
+    }
+}
+
+@keyframes disappear {
+    0% { height: 60vh;
+        width: 80vw;
+        background-color: #04abe9;
+        border-radius: 10px;
+    }
+    100% { height: 0px;
+        width: 0px;
+        background-color: #00eed1;
+        top: 10%;
+        opacity: 0;
+    }
+}

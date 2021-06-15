@@ -1,0 +1,112 @@
+.wrapper {
+    flex-grow: 4;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.contract {
+    transform: scale(0);
+}
+
+.item {
+    flex-basis: calc(100%/3);
+    color: white;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0%);
+    }
+    100% {
+       transform: scale(100%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.name {
+    transition: all 0.3s;
+}
+
+.desc {
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(-1vh);
+}
+
+.desc:hover {
+    text-decoration: underline;
+}
+
+.item:hover > .desc {
+    cursor: pointer;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.item:hover > .name {
+    transform: scale(1.2) translateY(-0.2vh);
+    font-weight: bold;
+    color: #00eed1;
+}
+
+.image {
+    width: 4vw;
+    opacity: 0.6;
+    transition: all 0.3s;
+    /* height: 20px; */
+}
+
+.item:hover > .image {
+    opacity: 1;
+}
+
+.about {
+    height: 100%;
+    position: relative;
+    animation-name: show;
+    animation-iteration-count: 1;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+    }
+}
+
+.back {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
