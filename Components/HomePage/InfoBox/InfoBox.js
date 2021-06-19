@@ -41,15 +41,15 @@ const InfoBox = ({ show }) => {
     return (
         <div className={`${styles.wrapper} ${show && styles.show} ${destroy && styles.hide}`}>
             {showChildren && <div className={styles['child-wrapper']}>
-                <SideMenu
+                {show && <SideMenu
                     updateView={updateView}
                     view={view}
                     items={items}
-                />
-                <ViewBox
+                />}
+                {show && <ViewBox
                     view={view}
                     items={items}
-                />
+                />}
             </div>}
         </div>
     )
