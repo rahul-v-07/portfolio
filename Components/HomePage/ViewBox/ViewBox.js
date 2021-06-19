@@ -15,7 +15,7 @@ const ViewBox = ({ view, items }) => {
         prev.current = view;
         setTimeout(() => {
             setCurrent(view);
-        }, 500);
+        }, 200);
     }, [view]);
     console.log(previous, current)
     return (

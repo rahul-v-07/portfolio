@@ -83,7 +83,7 @@ const Skills = () => {
                     const random = Math.floor(Math.random() * 100) + 1
                     return (<div
                             className={styles.item}
-                            style={{ animationDelay: `${random/200}s`}}
+                            style={{ animationDelay: `${random/500}s`}}
                         >
                             <img src={'/' + ico} className={styles.image} />
                         <div className={styles.name}>{name}</div>
